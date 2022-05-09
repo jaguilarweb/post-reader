@@ -9,7 +9,7 @@ import { Post } from '../models/Post';
 export class PostItemComponent implements OnInit {
   @Input() post: Post;
 
-  @Output() hidePost: EventEmitter<Post> = new EventEmitter;
+  @Output() hidePost: EventEmitter<Post> = new EventEmitter();
 
   constructor() {
     this.post = {
