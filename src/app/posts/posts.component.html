@@ -7,4 +7,4 @@
 </ul> -->
 
 <!-- Pass data from Parent to child components -->
-<app-post-item *ngFor="let post of posts" [post]="post" ></app-post-item>
+<app-post-item *ngFor="let post of posts" [post]="post" (hidePost)="hidePost($event)" ></app-post-item>

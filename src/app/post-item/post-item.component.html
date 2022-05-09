@@ -1,3 +1,9 @@
 <h3>{{ post.title }}</h3>
 <p>{{ post.body }}</p>
 <p>Votes: {{ post.votes }}</p>
+<button (click)="upvote(post)" >Upvote</button>
+<button (click)="downvote(post)" >Downvote</button>
+<!-- Its job is not to hide the post,
+it is to send a signal to the parent component informing the change. -->
+<button (click)="hide(post)">Hide</button>
+<br>
