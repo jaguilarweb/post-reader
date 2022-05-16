@@ -15,7 +15,14 @@ posts: Post[] = [];
   ) { }
 
   ngOnInit(): void {
-    this.posts = this.postService.getPosts();
+    this.postService.getPosts().subscribe(res => {
+      for (let index = 0; index < res.length; index++){
+        const post = res[index];
+        post["votes"] = 1;
+      }
+
+      this.posts = res;
+    });
   }
 
   hidePost(post: Post):void {
