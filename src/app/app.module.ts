@@ -8,6 +8,8 @@ import { PostsComponent } from './posts/posts.component';
 import { PostItemComponent } from './post-item/post-item.component';
 import { HistoryComponent } from './history/history.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { FormsModule } from '@angular/forms';
+import { CreatePostComponent } from './create-post/create-post.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     PostsComponent,
     PostItemComponent,
     HistoryComponent,
-    NavBarComponent
+    NavBarComponent,
+    CreatePostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
